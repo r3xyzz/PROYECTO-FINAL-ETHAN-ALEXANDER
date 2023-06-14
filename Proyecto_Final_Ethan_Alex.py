@@ -60,3 +60,4 @@ disponibles los con una “X”
 Comprar asiento: Solicita los datos del usuario, luego el usuario escoge un asiento, si es usuario de “bancoDuoc” el sistema 
 ======================================================================================================================
 '''
+print("hola")
