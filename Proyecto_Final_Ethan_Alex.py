@@ -60,10 +60,29 @@ disponibles los con una “X”
 Comprar asiento: Solicita los datos del usuario, luego el usuario escoge un asiento, si es usuario de “bancoDuoc” el sistema 
 ======================================================================================================================
 '''
+#Definicion de los numeros de asientos ocupados y disponibles, ademas de su respectivos precios
+asientos_disponibles = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,21,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42]
+asientos_ocupados = []
+precio = {
+    'normal': 78900,
+    'vip': 240000,
+}
+#Definicion de datos de pasajeros
+datos_pasajero = {}
+
 print("/////////////////////////")
 print("Bienvenido a Vuelos-Duoc")
 print("Gracias por Preferirnos")
 print("/////////////////////////")
 print()
 
+def mostrar_asiento_disponible():
+    print("asientos disponibles: ")
+    for e in range(1, 43):
+        if e in asientos_ocupados:
+            print("X", end=" ")
+        else:
+            print(e, end=" ")
+        if e % 6 == 0:
+            print()
 
