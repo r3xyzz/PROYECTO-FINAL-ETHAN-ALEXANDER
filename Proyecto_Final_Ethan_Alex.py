@@ -92,3 +92,7 @@ def comprar_asiento():
     rut = input("Ingrese el RUT del pasajero: ")
     telefono = input("Ingrese el Telefono del pasajero: ")
     banco =input("Ingrese el Banco del pasajero: ")
+
+    print("Seleccione un asiento a su preferencia: ")
+    mostrar_asiento_disponible()
+    seleccion = int(input("Ingrese el numero del asiento: "))
