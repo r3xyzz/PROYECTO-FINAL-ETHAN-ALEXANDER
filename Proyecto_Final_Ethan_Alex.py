@@ -71,7 +71,6 @@ datos_pasajeros = {}
 
 print("/////////////////////////")
 print("Bienvenido a Vuelos-Duoc")
-print("Gracias por Preferirnos")
 print("/////////////////////////")
 print()
 
@@ -117,3 +116,18 @@ def comprar_asiento():
         
         print("El valor del asiento seleccionado es: $" + str(precio))
         confirmacion = input("¿Desea confirmar la compra? (s/n): ")
+
+        if confirmacion.lower() == 's':
+            asientos_disponibles.remove(seleccion)
+            asientos_ocupados.append(seleccion)
+            datos_pasajeros[seleccion] = {
+                'nombre': nombre,
+                'rut': rut,
+                'telefono': telefono,
+                'banco': banco
+            }
+            print("Compra realizada con éxito.")
+        else:
+            print("Compra cancelada.")
+    except ValueError:
+        print("Error: ¡Ingrese un número de asiento válido!")
