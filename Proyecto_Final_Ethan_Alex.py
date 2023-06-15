@@ -97,3 +97,4 @@ def comprar_asiento():
     mostrar_asiento_disponible()
     seleccion = int(input("Ingrese el numero del asiento: "))
     
+    if seleccion
