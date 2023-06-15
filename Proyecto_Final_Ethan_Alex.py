@@ -42,21 +42,21 @@ Se pide implementar el siguiente menú:
 ======================================================================================================================
 --Ver asientos disponibles: Mostrará por pantalla todos los asientos disponibles con su número de asiento y los no
 disponibles los con una “X”
-| 1 2 3 4 5 6 |
-| |
-| 7 X X 10 11 12 |
-| |
-| X X X 16 X 18 |
-| |
-| 19 20 21 22 23 24 |
-| |
-| 25 26 27 X 29 30 |
+| 1 2 3 4 5 6                                   |
+|                                               |
+| 7 X X 10 11 12                                |
+|                                               |
+| X X X 16 X 18                                 |
+|                                               |
+| 19 20 21 22 23 24                             |
+|                                               |
+| 25 26 27 X 29 30                              |
 |______________________ ________________________|
 |______________________ ________________________|
-| X 32 33 34 35 36 |
-| |
-| |
-| X 38 X 40 41 X |
+| X 32 33 34 35 36                              |
+|                                               |
+|                                               |
+| X 38 X 40 41 X                                |
 Comprar asiento: Solicita los datos del usuario, luego el usuario escoge un asiento, si es usuario de “bancoDuoc” el sistema 
 ======================================================================================================================
 '''
