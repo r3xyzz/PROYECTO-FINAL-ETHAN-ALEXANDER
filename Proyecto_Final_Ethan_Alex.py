@@ -96,3 +96,4 @@ def comprar_asiento():
     print("Seleccione un asiento a su preferencia: ")
     mostrar_asiento_disponible()
     seleccion = int(input("Ingrese el numero del asiento: "))
+    
