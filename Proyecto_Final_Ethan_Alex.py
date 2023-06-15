@@ -86,3 +86,9 @@ def mostrar_asiento_disponible():
         if e % 6 == 0:
             print()
 
+#Definiendo la funcion para comprar un asiento
+def comprar_asiento():
+    nombre = input("Ingrese el Nombre del pasajero: ")
+    rut = input("Ingrese el RUT del pasajero: ")
+    telefono = input("Ingrese el Telefono del pasajero: ")
+    banco =input("Ingrese el Banco del pasajero: ")
