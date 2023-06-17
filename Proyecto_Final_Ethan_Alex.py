@@ -134,3 +134,4 @@ def comprar_asiento():
             print("Compra cancelada.")
     except ValueError:
         print("Error: ¡Ingrese un número de asiento válido!")
+print("ethan")
