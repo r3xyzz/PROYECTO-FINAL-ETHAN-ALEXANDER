@@ -1,3 +1,4 @@
+# RAMA ETHAN
 '''
 ENUNCIADO
 --Vuelos-Duoc requiere contratar sus servicios de informática para el desarrollo de un proyecto en Python, el cual consiste en la
@@ -74,7 +75,7 @@ print("Bienvenido a Vuelos-Duoc")
 print("/////////////////////////")
 print()
 
-# Función para mostrar los asientos disponibles
+# Función para mostrar los asientos disponibles del vuelo duoc
 def mostrar_asientos_disponibles():
     print("Asientos disponibles:")
     print("Recalcar que los precios de los asiento del 1 al 30 *normal* y del 31 al 42 *vip*")
@@ -117,18 +118,3 @@ def comprar_asiento():
 
         print("El valor del asiento seleccionado es: $" + str(precio))
         confirmacion = input("¿Desea confirmar la compra? (s/n): ")
-
-        if confirmacion.lower() == 's':
-            asientos_disponibles.remove(seleccion)
-            asientos_ocupados.append(seleccion)
-            datos_pasajeros[seleccion] = {
-                'nombre': nombre,
-                'rut': rut,
-                'telefono': telefono,
-                'banco': banco
-            }
-            print("Compra realizada con éxito.")
-        else:
-            print("Compra cancelada.")
-    except ValueError:
-        print("Error: ¡Ingrese un número de asiento válido!")
