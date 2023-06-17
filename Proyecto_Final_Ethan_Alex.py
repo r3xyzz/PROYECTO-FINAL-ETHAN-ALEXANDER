@@ -201,5 +201,9 @@ while True:
         elif opcion == '4':
             modificar_datos_pasajero()
         elif opcion == '5':
-        print("Gracias por utilizar Vuelos-Duoc. ¡Hasta luego!")
+            print("Gracias por utilizar Vuelos-Duoc. ¡Hasta luego!")
             break
+        else:
+            print("Opción inválida. Por favor, ingrese una opción válida.")
+    except ValueError:
+        print("Error: ¡Ingrese una opción válida!")
