@@ -74,9 +74,10 @@ print("Bienvenido a Vuelos-Duoc")
 print("/////////////////////////")
 print()
 
-# Función para mostrar los asientos disponibles del vuelo duoc
+# Función para mostrar los asientos disponibles
 def mostrar_asientos_disponibles():
     print("Asientos disponibles:")
+    print("Recalcar que los precios de los asiento del 1 al 30 *normal* y del 31 al 42 *vip*")
     for i in range(1, 43):
         if i in asientos_ocupados:
             print("X", end=" ")
@@ -87,33 +88,33 @@ def mostrar_asientos_disponibles():
 
 # Función para comprar un asiento
 def comprar_asiento():
-    nombre = input("Ingrese su nombre completo: ")
-    rut = input("Ingrese su RUT (Sin Punto Ni Guion): ")
-    telefono = input("Ingrese su numero de teléfono (Sin +56): ")
-    banco = input("Ingrese el banco al que pertenece (**Si pertenece a BancoDuoc hay 15% de descuento**]): ")
-    
+    nombre = input("Ingrese el nombre del pasajero: ")
+    rut = input("Ingrese el RUT del pasajero: ")
+    telefono = input("Ingrese el teléfono del pasajero: ")
+    banco = input("Ingrese el banco del pasajero: ")
+
     try:
         print("Seleccione un asiento:")
         mostrar_asientos_disponibles()
         seleccion = int(input("Ingrese el número de asiento: "))
-        
+
         if seleccion in asientos_ocupados:
             print("El asiento seleccionado ya está ocupado.")
             return
-        
+
         if banco.lower() == "bancoduoc" and (seleccion < 31 or seleccion > 42):
             print("Los usuarios de BancoDuoc deben elegir un asiento VIP.")
             return
-        
+
         if seleccion >= 31 and seleccion <= 42:
             precio = precios['vip']
         else:
             precio = precios['normal']
-        
+
         if banco.lower() == "bancoduoc":
             descuento = precio * 0.15
             precio -= descuento
-        
+
         print("El valor del asiento seleccionado es: $" + str(precio))
         confirmacion = input("¿Desea confirmar la compra? (s/n): ")
 
