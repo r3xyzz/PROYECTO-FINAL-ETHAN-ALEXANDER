@@ -178,3 +178,13 @@ def modificar_datos_pasajero():
             print("El asiento seleccionado está vacío.")
     except ValueError:
         print("Error: ¡Ingrese un número de asiento válido!")
+
+#Esto va a ejecutar el programa de vuelo
+while True:
+    print("\nBienvenido a Vuelos-Duoc")
+    print("Seleccione una opción:")
+    print("1. Ver asientos disponibles")
+    print("2. Comprar asiento")
+    print("3. Anular vuelo")
+    print("4. Modificar datos de pasajero")
+    print("5. Salir")
