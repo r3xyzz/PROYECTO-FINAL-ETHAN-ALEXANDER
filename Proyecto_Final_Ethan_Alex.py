@@ -135,3 +135,18 @@ def comprar_asiento():
             print("Compra cancelada.")
     except ValueError:
         print("Error: ¡Ingrese un número de asiento válido!")
+
+#La funcion para anular un vuelo
+def anular_vuelo():
+    try:
+        seleccion = int(input("Ingrese el número de asiento a anular: "))
+
+        if seleccion in asientos_ocupados:
+            asientos_ocupados.remove(seleccion)
+            asientos_disponibles.append(seleccion)
+            del datos_pasajeros[seleccion]
+            print("Vuelo anulado con éxito.")
+        else:
+            print("El asiento seleccionado no está ocupado.")
+    except ValueError:
+        print("Error: ¡Ingrese un número de asiento válido!")
