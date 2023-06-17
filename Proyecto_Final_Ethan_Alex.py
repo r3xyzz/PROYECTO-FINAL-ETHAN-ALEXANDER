@@ -71,6 +71,7 @@ precios = {
 }
 datos_pasajeros = {}
 
+
 print("/////////////////////////")
 print("Bienvenido a Vuelos-Duoc")
 print("/////////////////////////")
