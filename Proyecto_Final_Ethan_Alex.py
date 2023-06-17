@@ -150,3 +150,31 @@ def anular_vuelo():
             print("El asiento seleccionado no está ocupado.")
     except ValueError:
         print("Error: ¡Ingrese un número de asiento válido!")
+
+# Función para modificar datos de pasajero (esepcificar asiento de pasajero con asiento comprado para hacer el cambio de informacion de pasajero)
+def modificar_datos_pasajero():
+    try:
+        seleccion = int(input("Ingrese el número de asiento a modificar: "))
+
+        if seleccion in datos_pasajeros:
+            print("Datos actuales:")
+            print("Nombre: ", datos_pasajeros[seleccion]['nombre'])
+            print("RUT: ", datos_pasajeros[seleccion]['rut'])
+            print("Teléfono: ", datos_pasajeros[seleccion]['telefono'])
+            print("Banco: ", datos_pasajeros[seleccion]['banco'])
+
+            nombre = input("Ingrese el nuevo nombre del pasajero: ")
+            rut = input("Ingrese el nuevo RUT del pasajero: ")
+            telefono = input("Ingrese el nuevo teléfono del pasajero: ")
+            banco = input("Ingrese el nuevo banco del pasajero: ")
+
+            datos_pasajeros[seleccion]['nombre'] = nombre
+            datos_pasajeros[seleccion]['rut'] = rut
+            datos_pasajeros[seleccion]['telefono'] = telefono
+            datos_pasajeros[seleccion]['banco'] = banco
+
+            print("Datos modificados con éxito.")
+        else:
+            print("El asiento seleccionado está vacío.")
+    except ValueError:
+        print("Error: ¡Ingrese un número de asiento válido!")
