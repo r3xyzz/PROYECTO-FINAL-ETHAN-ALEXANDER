@@ -60,6 +60,7 @@ disponibles los con una “X”
 |                                               |
 | X 38 X 40 41 X                                |
 Comprar asiento: Solicita los datos del usuario, luego el usuario escoge un asiento, si es usuario de /bancoduoc/ el sistema 
+realizara un 15% de descuento en el total de su pasaje. [se me olvido poner el descuento xd]
 ======================================================================================================================
 '''
 # Definición de variables globales
@@ -80,7 +81,10 @@ print()
 # Función para mostrar los asientos disponibles
 def mostrar_asientos_disponibles():
     print("Asientos disponibles:")
+    print("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
     print("Recalcar que los precios de los asiento del 1 al 30 *normal* y del 31 al 42 *vip*")
+    print("Ademas de que si Pertenece al 'bancoduoc' debera elegir los asientos vips con obviamente el 15% de descuento ya aplicado")
+    print("////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////")
     for i in range(1, 43):
         if i in asientos_ocupados:
             print("X", end=" ")
@@ -92,9 +96,9 @@ def mostrar_asientos_disponibles():
 # Función para comprar un asiento
 def comprar_asiento():
     nombre = input("Ingrese el nombre del pasajero: ")
-    rut = input("Ingrese el RUT del pasajero: ")
-    telefono = input("Ingrese el teléfono del pasajero: ")
-    banco = input("Ingrese el banco del pasajero: ")
+    rut = input("Ingrese el RUT del pasajero (sin guion ni punto): ")
+    telefono = input("Ingrese el teléfono del pasajero (sin +56 ): ")
+    banco = input("Ingrese el banco del pasajero (*Para usuarios de bancoduoc hay 15%*): ")
 
     try:
         print("Seleccione un asiento:")
@@ -152,6 +156,7 @@ def anular_vuelo():
         print("Error: ¡Ingrese un número de asiento válido!")
 
 # Función para modificar datos de pasajero (esepcificar asiento de pasajero con asiento comprado para hacer el cambio de informacion de pasajero)
+# Ademas de las exepxiones
 def modificar_datos_pasajero():
     try:
         seleccion = int(input("Ingrese el número de asiento a modificar: "))
@@ -179,9 +184,9 @@ def modificar_datos_pasajero():
     except ValueError:
         print("Error: ¡Ingrese un número de asiento válido!")
 
-#Esto va a ejecutar el programa de vuelo
+#Esto va a ejecutar el programa de vuelo mostrando el menu disponible que dice en el enuncuiado
 while True:
-    print("\nBienvenido a Vuelos-Duoc")
+    print("\nBienvenido a Vuelos-Duoc") # el "\n" es un carácter de escape que representa una nueva línea. 
     print("Seleccione una opción:")
     print("1. Ver asientos disponibles")
     print("2. Comprar asiento")
@@ -189,6 +194,7 @@ while True:
     print("4. Modificar datos de pasajero")
     print("5. Salir")
 
+# Ademedas de las exepciones al ingrasar datos no correctos( me refiero a letras y numero donde se pida ingresar)
     try:
         opcion = input("Ingrese su opción: ")
 
@@ -207,3 +213,4 @@ while True:
             print("Opción inválida. Por favor, ingrese una opción válida.")
     except ValueError:
         print("Error: ¡Ingrese una opción válida!")
+
